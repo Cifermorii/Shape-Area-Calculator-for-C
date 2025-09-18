@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-
+#include <math.h>
 
 int main(){
 
@@ -9,10 +8,12 @@ int main(){
     float pi = 3.14;
     float r;
 
-    printf("\nArea of a Circle Calculator");
     printf("\nEnter your circle's radius here: ");
     scanf("%f", &r);
-    printf("\nYour Circle's Area is: %.2f", pi * r * r);
+
+    float area = pi * pow(r, 2);
+    int rounded1 = (int)ceil(area);
+    printf("\nYour Circle's Area is: %d", rounded1);
 
     //Area of a triangle calculator
 
@@ -20,30 +21,39 @@ int main(){
     float base;
     float height;
 
-    printf("\nArea of a Triangle Calculator");
-    printf("\nEnter your base and height: ");
+    printf("\nEnter your base and height for triangle: ");
     scanf("%f %f", &base, &height);
-    printf("\nYour triangle's Area is: %.2f", x * base * height);
+
+    float area2 = x * base * height;
+    int rounded2 = (int)ceil(area2);
+    printf("\nYour triangle's Area is: %d", rounded2);
 
     //Area of a Square calculator
 
-    int square;
+    float square;
 
-    printf("\nArea of a Square Calculator");
-    printf("\nEnter your dimensions: ");
-    scanf("%d", &square);
-    printf("\nYour Square's Area is: %d", square * square);
+    printf("\nEnter your dimensions for square: ");
+    scanf("%f", &square);
+
+    float area3 = square * square;
+    int rounded3 = (int)ceil(area3);
+    printf("\nYour Square's Area is: %d", rounded3);
 
     //Area of a Rectangle Calculator
 
-    int length;
-    int width;
+    float length;
+    float width;
 
-    printf("\nArea of a Rectangle Calculator");
-    printf("\nEnter your dimensions: ");
-    scanf("%d %d", &length, &width);
-    printf("\nYour Rectangle's Area is: %d", length * width);
+    printf("\nEnter your length and width for rectangle: ");
+    scanf("%f %f", &length, &width);
 
+    float area4 = length * width;
+    int rounded4 = (int)ceil(area4);
+    printf("\nYour Rectangle's Area is: %d", rounded4);
+
+    printf("\nPlease press Enter to exit...");
+    getchar();
+    getchar();
 
     return 0;
 }
